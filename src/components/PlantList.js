@@ -2,7 +2,7 @@ import React from 'react'
 import '../App.css';
 import '../index.css';
 
-export default function Results({ plantlist, onSelect }) {
+export default function Results({ plantlist, onSelect, key}) {
     return (
         <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-evenly' }}>
 
@@ -11,8 +11,8 @@ export default function Results({ plantlist, onSelect }) {
                     return <div className="plantList" key={i}>
                         <img src={item.image_url || "https://icon-library.com/images/no-picture-available-icon/no-picture-available-icon-1.jpg"}/>
                         <p>{item.common_name}</p>
-                        <p> Family: {item.family}</p>                    
-                    {onSelect&&  <button className="addBtn" onClick={() => {  onSelect(i)  }}>Add</button>}
+
+                    {onSelect&& <button className="removeBtn" onClick={() => { onSelect(i) }}>Remove</button>}
                     </div>
                 })
             }

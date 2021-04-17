@@ -4,6 +4,7 @@ import './index.css';
 import { useEffect, useState } from 'react';
 import SearchBar from './components/SearchBar';
 import Results from './components/Results';
+import PlantList from './components/PlantList';
 
 function App() {
   const [searchkeyword, setsearchkeyword] = useState('')
@@ -41,9 +42,10 @@ function App() {
   }, [])
 
 
-  const addtouserbucket = (index) => {
-    let findex=userList.findIndex((item,i)=>{
-    return item.id===plant[index].id
+  const addtoList = (index) => {
+    let findex=userList.findIndex((item,i) =>{ 
+    
+      return item.id===plant[index].id
     })
     if(findex==-1){
 
@@ -55,17 +57,24 @@ function App() {
       }
 
   }
+
+  const deletefromList = (index) => {
+      let newarray = [...userList]
+      newarray.splice(index, 1)
+      setuserList(newarray)
+      localStorage.setItem('userlist', JSON.stringify(newarray))
+  }
+  
   return (
     <div >
-      <h1> PlantFinder</h1>
-      <h5> Search for plants and favorite them</h5>
+      <h1>PlantKeep</h1>
+      <h5> Search for plants and save them </h5>
       <SearchBar onChange={handleChange} onClick={getPlant} />
-
-      Plant info from treffle api
-      <Results onSelect={addtouserbucket} plantlist={plant} />
+      <Results onSelect={addtoList} plantlist={plant} />
+      <br/>
       <div>
-        <p>user bucket</p>
-        <Results plantlist={userList} />
+        <p className="savedplantsText">Saved Plants</p>
+        <PlantList onSelect={deletefromList} plantlist={userList} />
         {/* <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-evenly' }}>
 
           {
