@@ -30,6 +30,7 @@ code {
 .addBtn:hover {
   background-color: #4CAF50; /* Green */
   color: white;
+  cursor: pointer;
 }
 
 .removeBtn {
@@ -49,6 +50,7 @@ code {
 .removeBtn:hover {
   background-color: black; /* Green */
   color: white;
+  cursor: pointer;
 }
 
 .searchBtn {
@@ -67,6 +69,7 @@ code {
 .searchBtn:hover {
   background-color: rgb(39, 82, 177);
   color: white;
+  cursor: pointer;
 }
 
 input {
