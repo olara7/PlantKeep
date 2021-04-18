@@ -54,20 +54,19 @@ code {
 }
 
 .searchBtn {
-  background-color: white;
+  background-color: rgb(43, 91, 194);
   border: none;
-  color: rgb(39, 82, 177);
+  color: white;
   padding: 10px 20px;
   text-align: center;
-  text-decoration: none;
   display: inline-block;
   font-size: 13px;
   transition-duration: 0.4s;
-  border: 2px solid rgb(39, 82, 177);
+  border: 2px solid rgb(43, 91, 194);
 }
 
 .searchBtn:hover {
-  background-color: rgb(39, 82, 177);
+  background-color: rgb(24, 50, 107);
   color: white;
   cursor: pointer;
 }
@@ -123,7 +122,7 @@ img {
 .family {
   border-style: solid;
   border-radius: 20px;
-  padding: 2px 5px;
+  padding: 1px 5px 3px;
   border-color: rgb(19, 90, 60);
   border-width: 2px;
   background: rgb(19, 90, 60);
