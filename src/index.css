@@ -51,6 +51,32 @@ code {
   color: white;
 }
 
+.searchBtn {
+  background-color: white;
+  border: none;
+  color: rgb(39, 82, 177);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  transition-duration: 0.4s;
+  border: 2px solid rgb(39, 82, 177);
+}
+
+.searchBtn:hover {
+  background-color: rgb(39, 82, 177);
+  color: white;
+}
+
+input {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
 h1 {
   text-align: center;
 }
@@ -89,4 +115,19 @@ img {
   width: 350;
   border-radius: 30px;
   max-width: 350;
+}
+
+.family {
+  border-style: solid;
+  border-radius: 20px;
+  padding: 2px 5px;
+  border-color: rgb(19, 90, 60);
+  border-width: 2px;
+  background: rgb(19, 90, 60);
+  color: white;
+}
+
+.plantName {
+  
+
 }
